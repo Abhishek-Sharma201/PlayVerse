@@ -1,14 +1,14 @@
 import React from "react";
-// import {
-//   TextField,
-//   Button,
-//   Checkbox,
-//   FormControlLabel,
-//   Typography,
-//   Box,
-//   Grid,
-//   InputAdornment,
-// } from "@mui/material";
+import {
+  TextField,
+  Button,
+  Checkbox,
+  FormControlLabel,
+  Typography,
+  Box,
+  Grid,
+  InputAdornment,
+} from "@mui/material";
 import { Lock, Email } from "@mui/icons-material"; // Importing icons
 import FacebookIcon from "@mui/icons-material/Facebook"; // Importing Facebook icon
 import TwitterIcon from "@mui/icons-material/Twitter"; // Importing Twitter icon
@@ -16,15 +16,16 @@ import YouTubeIcon from "@mui/icons-material/YouTube"; // Importing YouTube icon
 import InstagramIcon from "@mui/icons-material/Instagram"; // Importing Instagram icon
 import LinkedInIcon from "@mui/icons-material/LinkedIn"; // Importing LinkedIn icon
 
-const Login = () => {
+const Signup = () => {
   return (
     <div
       className="w-screen h-screen flex items-center justify-center"
       style={{
-        backgroundImage: `url('/backgroun3.jpg')`, // Image should be in the public folder
+        backgroundImage: `url('/backgroun3.jpg')`, // Replace with your actual image
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        backgroundAttachment: "fixed", // Ensures full coverage even on scrolling
       }}
     >
       {/* Content Wrapper */}
@@ -32,7 +33,7 @@ const Login = () => {
         {/* Left Section */}
         <div className="w-1/2 text-white px-6 py-10">
           <h1 className="text-4xl font-bold mb-6">Play Verse</h1>
-          <h2 className="text-3xl font-bold mb-2">Welcome!</h2>
+          <h2 className="text-3xl font-bold mb-2">Join Us!</h2>
           <p className="text-gray-300 mb-6">
             Play Your Way—Discover, Connect, and Engage with Playverse!
           </p>
@@ -75,8 +76,22 @@ const Login = () => {
 
         {/* Right Section */}
         <div className="w-1/2 p-8 rounded-lg backdrop-blur-md">
-          <h2 className="text-white text-2xl font-bold mb-6">Sign In</h2>
+          <h2 className="text-white text-2xl font-bold mb-6">Sign Up</h2>
           <form>
+            <div className="mb-4">
+              <label
+                htmlFor="name"
+                className="block text-gray-400 text-sm font-semibold mb-2"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                className="w-full px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-pink-500"
+              />
+            </div>
             <div className="mb-4">
               <label
                 htmlFor="email"
@@ -105,27 +120,32 @@ const Login = () => {
                 className="w-full px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-pink-500"
               />
             </div>
-            <div className="flex items-center justify-between mb-4">
-              <label className="flex items-center text-gray-400 text-sm">
-                <input type="checkbox" className="mr-2 accent-pink-500" />
-                Remember Me
+            <div className="mb-4">
+              <label
+                htmlFor="confirm-password"
+                className="block text-gray-400 text-sm font-semibold mb-2"
+              >
+                Confirm Password
               </label>
-              <a href="#" className="text-pink-400 text-sm hover:underline">
-                Forget Password?
-              </a>
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="Confirm your password"
+                className="w-full px-4 py-2 bg-gray-700 text-white rounded-md outline-none focus:ring-2 focus:ring-pink-500"
+              />
             </div>
             <button
               type="submit"
               className="w-full bg-pink-500 text-white py-2 rounded-md hover:bg-pink-600 transition duration-200"
             >
-              Login In
+              Sign Up
             </button>
           </form>
           <div className="mt-6 text-center">
             <p className="text-gray-400 text-sm">
-              Don't have an account?{" "}
-              <a href="/signup" className="text-pink-400 hover:underline">
-                <i className="fas fa-user-plus mr-1"></i> Sign Up
+              Already have an account?{" "}
+              <a href="/login" className="text-pink-400 hover:underline">
+                Log In
               </a>
             </p>
           </div>
@@ -135,4 +155,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
