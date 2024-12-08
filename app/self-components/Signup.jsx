@@ -19,7 +19,7 @@ const Signup = () => {
     >
       {/* Content Wrapper */}
       <div
-        className="rounded-xl shadow-lg w-[900px] p-8 flex"
+        className="rounded-xl shadow-lg w-full max-w-[900px] p-6 md:p-8 flex flex-col md:flex-row"
         style={{
           backgroundColor: "rgba(10, 25, 47, 0.8)", // Dark blue background
           boxShadow: "0 0 30px rgba(0, 255, 255, 0.8)", // Neon glow effect
@@ -27,7 +27,7 @@ const Signup = () => {
         }}
       >
         {/* Left Section */}
-        <div className="w-1/2 text-white px-6 py-10">
+        <div className="w-full md:w-1/2 text-white px-6 py-10">
           <h1 className="text-4xl font-bold mb-6">Play Verse</h1>
           <h2 className="text-3xl font-bold mb-2">Join Us!</h2>
           <p className="text-gray-300 mb-6">
@@ -53,7 +53,7 @@ const Signup = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-1/2 p-8 rounded-lg">
+        <div className="w-full md:w-1/2 p-6 md:p-8 rounded-lg">
           <h2 className="text-white text-2xl font-bold mb-6">Sign Up</h2>
           <form>
             <div className="mb-4">
@@ -105,7 +105,7 @@ const Signup = () => {
               >
                 Confirm Password
               </label>
-              <input
+ <input
                 type="password"
                 id="confirm-password"
                 placeholder="Confirm your password"
@@ -135,7 +135,7 @@ const Signup = () => {
                   value="admin"
                   className="mr-2"
                 />
-                <label htmlFor="admin" className="text-gray-300">Admin</label>
+                <label htmlFor="admin" className="text-gray-300">Gamer</label>
               </div>
             </div>
 

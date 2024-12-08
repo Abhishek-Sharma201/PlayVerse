@@ -22,7 +22,6 @@ const Login = () => {
       className="w-screen h-screen flex items-center justify-center"
       style={{
         backgroundImage: `url('/background.jpg')`,
-        // backgroundcolour: "black",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -31,7 +30,7 @@ const Login = () => {
     >
       {/* Content Wrapper */}
       <div
-        className="rounded-xl shadow-lg w-[900px] p-8 flex"
+        className="rounded-xl shadow-lg w-full max-w-[900px] p-6 md:p-8 flex flex-col md:flex-row"
         style={{
           backgroundColor: "rgba(10, 25, 47, 0.8)", // Dark blue background
           boxShadow: "0 0 30px rgba(0, 255, 255, 0.8)", // Neon glow effect
@@ -39,7 +38,7 @@ const Login = () => {
         }}
       >
         {/* Left Section */}
-        <div className="w-1/2 text-white px-6 py-10">
+        <div className="w-full md:w-1/2 text-white px-6 py-10">
           <h1 className="text-4xl font-bold mb-6">Play Verse</h1>
           <h2 className="text-3xl font-bold mb-2">Welcome Back!</h2>
           <p className="text-gray-300 mb-6">
@@ -65,7 +64,7 @@ const Login = () => {
         </div>
 
         {/* Right Section */}
-        <div className="w-1/2 p-8 rounded-lg">
+        <div className="w-full md:w-1/2 p-6 md:p-8 rounded-lg">
           <h2 className="text-white text-2xl font-bold mb-6">Log In</h2>
           <form>
             <div className="mb-4">
@@ -109,7 +108,7 @@ const Login = () => {
               type="submit"
               className="w-full bg-cyan-400 text-black py-2 rounded-md hover:bg-cyan-500 transition duration-200"
             >
-              Log In
+ Log In
             </button>
           </form>
           <div className="mt-6 text-center">
