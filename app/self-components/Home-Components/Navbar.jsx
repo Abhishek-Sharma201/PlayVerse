@@ -3,8 +3,11 @@
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
+
   return (
     <nav className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-900 via-purple-800 to-purple-600 shadow-md transition-all duration-300 hover:shadow-lg flex-wrap">
       <div className="flex items-center gap-8">
@@ -16,8 +19,11 @@ export default function Navbar() {
           className="hover:opacity-80 transition-opacity duration-300"
         />
         <div className="flex gap-4">
-          {["Browse", "Shop", "News", "FAQ"].map((item) => (
-            <button key={item} className="text-white hover:text-purple-300 transition-colors duration-300 relative group">
+          {["Home", "News"].map((item) => (
+            <button
+              key={item}
+              className="text-white hover:text-purple-300 transition-colors duration-300 relative group"
+            >
               {item}
               <span className="absolute inset-0 rounded-md bg-purple-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></span>
             </button>
@@ -33,11 +39,17 @@ export default function Navbar() {
           />
           <Search className="absolute right-3 top-2.5 text-gray-500 h-5 w-5" />
         </div>
-        <Button className="bg-transparent hover:bg-purple-200 text-white transition-all duration-300 relative group">
+        <Button
+          onClick={() => router.push("/login")}
+          className="bg-transparent hover:bg-purple-200 text-white transition-all duration-300 relative group"
+        >
           Log In
           <span className="absolute inset-0 rounded-md bg-purple-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></span>
         </Button>
-        <Button className="bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 relative group">
+        <Button
+          onClick={() => router.push("/signup")}
+          className="bg-purple-600 hover:bg-purple-700 text-white transition-all duration-300 relative group"
+        >
           Sign Up
           <span className="absolute inset-0 rounded-md bg-purple-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></span>
         </Button>

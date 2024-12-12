@@ -1,7 +1,7 @@
 "use client";
 
-import ArticlesSection from "@/components/Home-components/ArticlesSection";
-import TagsSection from "@/components/Home-components/TagsSection";
+import ArticlesSection from "../../self-components/Home-Components/ArticlesSection";
+import TagsSection from "../../self-components/Home-Components/TagsSection";
 
 export default function SidebarRight() {
   return (

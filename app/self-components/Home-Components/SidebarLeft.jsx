@@ -1,6 +1,6 @@
 "use client";
 
-import { MoreVertical, GamepadIcon as GameController, Users } from "lucide-react";
+import { MoreVertical, GamepadIcon as GameController, Users, ChartNoAxesCombined, CalendarCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -50,16 +50,16 @@ export default function SidebarLeft() {
         <h2 className="font-semibold mb-4">Platforms</h2>
         <div className="flex flex-col gap-2">
           <button className="flex items-center gap-2 text-purple-500 bg-purple-500/10 p-2 rounded-lg">
-            <GameController className="h-5 w-5" />
-            <span>Gaming</span>
+            <CalendarCheck className="h-5 w-5" />
+            <span>Events</span>
           </button>
-          <button className="flex items-center gap-2 text-gray-400 hover:bg-gray-800 p-2 rounded-lg">
-            <Users className="h-5 w-5" />
-            <span>MetaVerse</span>
+          <button className="flex items-center gap-2 text-purple-500 bg-purple-500/10 p-2 rounded-lg">
+            <ChartNoAxesCombined className="h-5 w-5" />
+            <span>Leaderboard</span>
           </button>
-          <button className="flex items-center gap-2 text-gray-400 hover:bg-gray-800 p-2 rounded-lg">
+          <button className="flex items-center gap-2 text-purple-500 bg-purple-500/10 p-2 rounded-lg">
             <GameController className="h-5 w-5" />
-            <span>Retro </span>
+            <span>Play Games</span>
           </button>
         </div>
       </div>

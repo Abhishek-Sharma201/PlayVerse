@@ -1,10 +1,10 @@
 "use client";
 
-import Navbar from "@/components/Home-components/Navbar";
-import SidebarLeft from "@/components/Home-components/SidebarLeft";
-import HeroSection from "@/components/Home-components/HeroSection";
-import TrendingGames from "@/components/Home-components/TrendingGames";
-import SidebarRight from "@/components/Home-components/SidebarRight";
+import Navbar from "../../self-components/Home-Components/Navbar";
+import SidebarLeft from "../../self-components/Home-Components/SidebarLeft";
+import HeroSection from "../../self-components/Home-Components/HeroSection";
+import TrendingGames from "../../self-components/Home-Components/TrendingGames";
+import SidebarRight from "../../self-components/Home-Components/SidebarRight";
 
 export default function Home() {
   return (
