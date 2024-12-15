@@ -4,6 +4,7 @@ import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Navbar() {
   const router = useRouter();
@@ -20,13 +21,18 @@ export default function Navbar() {
         />
         <div className="flex gap-4">
           {["Home", "News", "Dashboard", "About", "Contact", "Service"].map((item) => (
-            <button
+            <Link
               key={item}
-              className="text-white hover:text-purple-300 transition-colors duration-300 relative group"
+              href={item === "News" ? "/view/News" : item === "Dashboard" ? "/dashboard" : `/${item.toLowerCase()}`}
+              passHref
             >
-              {item}
-              <span className="absolute inset-0 rounded-md bg-purple-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></span>
-            </button>
+              <button
+                className="text-white hover:text-purple-300 transition-colors duration-300 relative group"
+              >
+                {item}
+                <span className="absolute inset-0 rounded-md bg-purple-300 opacity-0 group-hover:opacity-50 transition-opacity duration-300"></span>
+              </button>
+            </Link>
           ))}
         </div>
       </div>
