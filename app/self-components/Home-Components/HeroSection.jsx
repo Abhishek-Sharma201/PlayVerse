@@ -9,10 +9,22 @@ export default function HeroSection() {
       <div className="absolute inset-0 flex items-center justify-between p-8">
         <div className="max-w-md text-white z-10">
           <span className="text-purple-200">LIVE</span>
-          <h1 className="text-4xl font-bold mb-2">Season 9 GameX Valorant Tournament</h1>
-          <p className="text-purple-100 mb-4">Join our Season 9 gaming tournament</p>
-          <Button className="relative w-full bg-gradient-to-r from-purple-700 to-purple-500 hover:scale-105 transition-transform duration-300 mt-4 text-white border-2 border-transparent hover:border-purple-400">
-            <span className="absolute inset-0 rounded-lg border-2 border-purple-400 opacity-50 blur-md "></span>
+          <h1 className="text-4xl font-bold mb-2">
+            Season 9 GameX Valorant Tournament
+          </h1>
+          <p className="text-purple-100 mb-4">
+            Join our Season 9 gaming tournament
+          </p>
+          <Button
+            className="relative w-full bg-gradient-to-r from-purple-700 to-purple-500 hover:scale-105 transition-transform duration-300 mt-4 text-white border-2 border-transparent hover:border-purple-400"
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/embed/HHaJiF55gIw?si=cZPkpF1kUGhD87hw",
+                "_blank"
+              )
+            } // Replace with your video URL
+          >
+            <span className="absolute inset-0 rounded-lg border-2 border-purple-400 opacity-50 blur-md"></span>
             Watch More
           </Button>
         </div>

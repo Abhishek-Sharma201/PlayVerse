@@ -19,7 +19,7 @@ export default function Navbar() {
           className="hover:opacity-80 transition-opacity duration-300"
         />
         <div className="flex gap-4">
-          {["Home", "News"].map((item) => (
+          {["Home", "News", "Dashboard", "About", "Contact", "Service"].map((item) => (
             <button
               key={item}
               className="text-white hover:text-purple-300 transition-colors duration-300 relative group"
