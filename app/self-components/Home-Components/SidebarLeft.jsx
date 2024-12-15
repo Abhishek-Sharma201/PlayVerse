@@ -1,10 +1,13 @@
 "use client";
 
-import { MoreVertical, GamepadIcon as GameController, Users } from "lucide-react";
+import { MoreVertical, GamepadIcon as GameController, Users, ChartNoAxesCombined, CalendarCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";  // Import useRouter
 
 export default function SidebarLeft() {
+  const router = useRouter();  // Initialize useRouter hook
+
   const channels = [
     { name: "TopPlayers", followers: "25K", image: "/images/first.png" },
     { name: "AllStarsShine", followers: "21K", image: "/images/allstarshine.jpeg" },
@@ -12,6 +15,11 @@ export default function SidebarLeft() {
     { name: "PowerUP", followers: "19.2K", image: "/images/powerup.png" },
     { name: "NinjaGO", followers: "18.9K", image: "/images/ninjago.png" },
   ];
+
+  // Function to navigate to the events page
+  const navigateToEvents = () => {
+    router.push("/view/Events");  // Change "/events" to the actual path of your events page
+  };
 
   return (
     <aside className="w-64 border-r border-gray-800 p-4">
@@ -49,17 +57,21 @@ export default function SidebarLeft() {
       <div>
         <h2 className="font-semibold mb-4">Platforms</h2>
         <div className="flex flex-col gap-2">
+          {/* Update the button to navigate to events page */}
+          <button
+            onClick={navigateToEvents}  // Attach the onClick handler
+            className="flex items-center gap-2 text-purple-500 bg-purple-500/10 p-2 rounded-lg"
+          >
+            <CalendarCheck className="h-5 w-5" />
+            <span>Events</span>
+          </button>
+          <button className="flex items-center gap-2 text-purple-500 bg-purple-500/10 p-2 rounded-lg">
+            <ChartNoAxesCombined className="h-5 w-5" />
+            <span>Leaderboard</span>
+          </button>
           <button className="flex items-center gap-2 text-purple-500 bg-purple-500/10 p-2 rounded-lg">
             <GameController className="h-5 w-5" />
-            <span>Gaming</span>
-          </button>
-          <button className="flex items-center gap-2 text-gray-400 hover:bg-gray-800 p-2 rounded-lg">
-            <Users className="h-5 w-5" />
-            <span>MetaVerse</span>
-          </button>
-          <button className="flex items-center gap-2 text-gray-400 hover:bg-gray-800 p-2 rounded-lg">
-            <GameController className="h-5 w-5" />
-            <span>Retro </span>
+            <span>Play Games</span>
           </button>
         </div>
       </div>
