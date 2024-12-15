@@ -8,7 +8,7 @@ const newsCategories = [
   {
     id: 1,
     title: "Sports",
-    image: "/images/news/sports.jpg", // Adjusted image path
+    image: "/images/news/download.jpeg", // Adjusted image path
     description: "Play 100+ plus games in category like puzzle, action, arcade and sports",
     imdbRating: 8.5,
     userRating: 4.7,
