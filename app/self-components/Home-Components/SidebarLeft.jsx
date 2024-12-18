@@ -45,7 +45,7 @@ export default function SidebarLeft() {
     <aside className="w-64 border-r border-gray-800 p-4">
       <div className="mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-semibold">Channels</h2>
+          <h2 className="font-semibold">Discord Channel</h2>
           <MoreVertical className="h-5 w-5 text-gray-500" />
         </div>
         {channels.map((channel) => (
@@ -75,7 +75,7 @@ export default function SidebarLeft() {
           onClick={() => (window.location.href = "https://discord.com/channels/@me")} // Replace 'https://example.com' with your desired URL
         >
           <span className="absolute inset-0 rounded-lg border-2 border-purple-400 opacity-50 blur-md"></span>
-          Browse More
+          Join Us
         </Button>
       </div>
 

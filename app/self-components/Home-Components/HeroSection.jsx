@@ -25,7 +25,7 @@ export default function HeroSection() {
             } // Replace with your video URL
           >
             <span className="absolute inset-0 rounded-lg border-2 border-purple-400 opacity-50 blur-md"></span>
-            Watch More
+            Watch Now
           </Button>
         </div>
         <Image

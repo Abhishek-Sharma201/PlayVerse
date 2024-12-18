@@ -47,7 +47,7 @@ export default function GameArticle() {
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight"
         >
-          Top Battle Royal Games
+          Blogs
         </motion.h1>
 
         {/* Author section */}

@@ -37,7 +37,7 @@ export default function TrendingGames() {
                 onClick={() => router.push(`/view/Home/game-details/${game.id}`)}
                 className="bg-gradient-to-r from-purple-700 to-purple-500 hover:scale-105 transition-transform duration-300 w-full text-white border-2 border-transparent hover:border-purple-400 neon-border"
               >
-                Join Now
+                See More
               </Button>
             </div>
           </div>
