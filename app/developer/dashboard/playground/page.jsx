@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const DeveloperPage = () => {
+const Playground = () => {
   // Initial game list state
   const [games, setGames] = useState([
     {
@@ -139,7 +139,9 @@ const DeveloperPage = () => {
                 className="w-full p-2 rounded bg-gray-700 text-white mb-2 focus:outline-none hover:ring-2 hover:ring-neon"
                 placeholder="Game Title"
                 value={newGame.title}
-                onChange={(e) => setNewGame({ ...newGame, title: e.target.value })}
+                onChange={(e) =>
+                  setNewGame({ ...newGame, title: e.target.value })
+                }
                 required
               />
               <input
@@ -147,7 +149,9 @@ const DeveloperPage = () => {
                 className="w-full p-2 rounded bg-gray-700 text-white mb-2 focus:outline-none hover:ring-2 hover:ring-neon"
                 placeholder="Image URL"
                 value={newGame.image}
-                onChange={(e) => setNewGame({ ...newGame, image: e.target.value })}
+                onChange={(e) =>
+                  setNewGame({ ...newGame, image: e.target.value })
+                }
                 required
               />
               <input
@@ -155,7 +159,9 @@ const DeveloperPage = () => {
                 className="w-full p-2 rounded bg-gray-700 text-white mb-2 focus:outline-none hover:ring-2 hover:ring-neon"
                 placeholder="Date"
                 value={newGame.date}
-                onChange={(e) => setNewGame({ ...newGame, date: e.target.value })}
+                onChange={(e) =>
+                  setNewGame({ ...newGame, date: e.target.value })
+                }
                 required
               />
               <input
@@ -163,7 +169,9 @@ const DeveloperPage = () => {
                 className="w-full p-2 rounded bg-gray-700 text-white mb-2 focus:outline-none hover:ring-2 hover:ring-neon"
                 placeholder="Spots Left"
                 value={newGame.spotsLeft}
-                onChange={(e) => setNewGame({ ...newGame, spotsLeft: e.target.value })}
+                onChange={(e) =>
+                  setNewGame({ ...newGame, spotsLeft: e.target.value })
+                }
                 required
               />
               <button
@@ -213,7 +221,9 @@ const DeveloperPage = () => {
                   {game.spotsLeft}
                 </span>
               </div>
-              <h3 className="text-xl font-semibold mt-4 text-neon">{game.title}</h3>
+              <h3 className="text-xl font-semibold mt-4 text-neon">
+                {game.title}
+              </h3>
               <p className="text-sm text-gray-400">{game.date}</p>
 
               {/* Buttons */}
@@ -239,4 +249,4 @@ const DeveloperPage = () => {
   );
 };
 
-export default DeveloperPage;
+export default Playground;

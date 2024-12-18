@@ -19,7 +19,7 @@ export default function Navbar() {
           height={50}
           className="hover:opacity-80 transition-opacity duration-300"
         />
-        <div className="flex gap-4">
+        <div className="flex gap-8">
           {["Home", "News", "Dashboard", "About", "Contact", "Service"].map((item) => (
             <Link
               key={item}

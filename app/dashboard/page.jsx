@@ -34,7 +34,7 @@ export default function Dashboard() {
       {/* Grid background */}
       <div className="absolute inset-0 bg-grid-blue-purple opacity-10"></div>
       
-      <div className="relative container mx-auto p-4 lg:p-8">
+      <div className="relative self-center container mx-auto p-4 lg:p-8">
         {/* Header */}
         <div className="mb-8 flex items-center justify-between">
           <h1 className="text-2xl font-bold tracking-tight text-blue-300">SUMMARY</h1>

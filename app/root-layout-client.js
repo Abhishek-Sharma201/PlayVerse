@@ -11,7 +11,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 const RootLayoutClient = ({ children }) => {
   const pathname = usePathname();
-  const excludeSidebarRoutes = ["/login", "/signup", "/view/landingpage"];
+  const excludeSidebarRoutes = [
+    "/login",
+    "/signup",
+    "/view/landingpage",
+    "/view/Home",
+  ];
 
   const shouldShowSidebar = !excludeSidebarRoutes.includes(pathname);
 

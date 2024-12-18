@@ -30,13 +30,13 @@ import { ModeToggle } from "./theme-trigger";
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "dev",
+    email: "dev@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "Developer Inc",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
     },
@@ -59,8 +59,8 @@ const data = {
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Games",
+          url: "/developer/dashboard",
         },
         {
           title: "Starred",
@@ -73,16 +73,16 @@ const data = {
       ],
     },
     {
-      title: "Models",
+      title: "Assets",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: "Logo",
+          url: "/developer/dashboard/assets",
         },
         {
-          title: "Explorer",
+          title: "Photos",
           url: "#",
         },
         {
@@ -98,7 +98,7 @@ const data = {
       items: [
         {
           title: "Introduction",
-          url: "#",
+          url: "/developer/dashboard/docs",
         },
         {
           title: "Get Started",
@@ -121,7 +121,7 @@ const data = {
       items: [
         {
           title: "General",
-          url: "#",
+          url: "/developer/dashboard/settings",
         },
         {
           title: "Team",
@@ -132,7 +132,7 @@ const data = {
           url: "#",
         },
         {
-          title: "Limits",
+          title: <ModeToggle />,
           url: "#",
         },
       ],
@@ -165,8 +165,7 @@ export function AppSidebar({ ...props }) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
-        <ModeToggle />
+        {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

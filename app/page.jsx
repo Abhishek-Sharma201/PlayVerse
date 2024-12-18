@@ -1,7 +1,19 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
+import LandingPage from "./view/landingpage/page";
+import Home from "./view/Home/page";
+import { useRouter } from "next/navigation";
 
 const page = () => {
-  return <div>Page</div>;
+  const isLoggegIn = true;
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isLoggegIn) return router.push("/view/Home");
+    return router.push("/view/landingpage");
+  }, []);
+  return;
 };
 
 export default page;

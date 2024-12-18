@@ -105,7 +105,7 @@ const Signup = () => {
               >
                 Confirm Password
               </label>
- <input
+              <input
                 type="password"
                 id="confirm-password"
                 placeholder="Confirm your password"
@@ -127,7 +127,9 @@ const Signup = () => {
                   className="mr-2"
                   defaultChecked
                 />
-                <label htmlFor="user" className="text-gray-300 mr-4">User </label>
+                <label htmlFor="user" className="text-gray-300 mr-4">
+                  User{" "}
+                </label>
                 <input
                   type="radio"
                   id="admin"
@@ -135,7 +137,9 @@ const Signup = () => {
                   value="admin"
                   className="mr-2"
                 />
-                <label htmlFor="admin" className="text-gray-300">Gamer</label>
+                <label htmlFor="admin" className="text-gray-300">
+                  Gamer
+                </label>
               </div>
             </div>
 
