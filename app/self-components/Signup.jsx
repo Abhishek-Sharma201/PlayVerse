@@ -138,7 +138,7 @@ const Signup = () => {
                   className="mr-2"
                 />
                 <label htmlFor="admin" className="text-gray-300">
-                  Gamer
+                  Developer
                 </label>
               </div>
             </div>
