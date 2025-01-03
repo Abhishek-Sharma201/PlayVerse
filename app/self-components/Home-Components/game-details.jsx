@@ -7,71 +7,205 @@ import Image from "next/image";
 export default function GameDetails({ params }) {
   const router = useRouter();
   const [game, setGame] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const games = [
     {
-      id: "valorant",
-      name: "Valorant",
-      image: "/images/valorant.jpg",
-      description: "Valorant is a tactical 5v5 shooter with unique agents that combines precision gunplay and strategic team coordination. With a range of characters each offering diverse abilities, players must work together to complete objectives. Constant updates and an evolving meta ensure a fresh and competitive experience for everyone.",
-      playStoreLink: "https://play.google.com/store/apps/details?id=com.riotgames.valorant",
-      collaborations: [
+      id: "Clothes",
+      name: "Clothes",
+      description: "Valorant is a tactical 5v5 shooter with unique agents...",
+      products: [
         {
-          name: "HyperX",
-          description: "Exclusive gaming peripherals partnership for ultimate performance.",
-          link: "https://www.hyperxgaming.com/"
+          id: "product1",
+          name: "Valorant Hoodie",
+          image: "/images/valorant_hoodie.jpg",
+          description: "A stylish Valorant-themed hoodie for gaming enthusiasts.",
+          price: "$39.99",
+          details: "Soft, comfortable hoodie perfect for casual gaming sessions.",
         },
         {
-          name: "Alienware",
-          description: "Valorant optimized for Alienware gaming systems.",
-          link: "https://www.alienware.com/"
-        }
-      ]
-    },
-    {
-      id: "ori",
-      name: "Ori",
-      image: "/images/ori.jpg",
-      description: "Ori is a visually stunning platformer that takes players on an emotional journey through a magical forest. The game is known for its breathtaking visuals, challenging puzzles, and deeply touching narrative. It combines smooth gameplay with a beautiful soundtrack, making it a truly immersive experience.",
-      playStoreLink: "https://play.google.com/store/apps/details?id=com.moonstudios.ori",
-      collaborations: []
-    },
-    {
-      id: "fortnite",
-      name: "Fortnite",
-      image: "/images/fortnite.jpg",
-      description: "Fortnite is a globally popular battle royale game that blends action, creativity, and community. Players compete to be the last one standing while building structures to gain an edge. With frequent events, new game modes, and collaborations, Fortnite offers endless excitement and creativity.",
-      playStoreLink: "https://play.google.com/store/apps/details?id=com.epicgames.fortnite",
-      collaborations: [
+          id: "product2",
+          name: "Apex Legends T-shirt",
+          image: "/images/apex_tshirt.jpg",
+          description: "An awesome Apex Legends T-shirt for true fans.",
+          price: "$19.99",
+          details: "100% cotton T-shirt with vibrant Apex Legends design.",
+        },
         {
-          name: "Marvel",
-          description: "Exclusive events featuring iconic Marvel superheroes.",
-          link: "https://www.marvel.com/"
-        }
-      ]
-    },
-    {
-      id: "pubg",
-      name: "PUBG",
-      image: "/images/pubg.webp",
-      description: "PUBG delivers an intense battle royale experience with realistic gameplay and vast open maps. Players can team up or go solo as they scavenge for weapons, vehicles, and supplies, all while avoiding elimination. Its immersive graphics and competitive gameplay keep players engaged.",
-      playStoreLink: "https://play.google.com/store/apps/details?id=com.pubg.imobile",
-      collaborations: []
-    },
-    {
-      id: "apex-legends",
-      name: "Apex Legends",
-      image: "/images/apex.jpg",
-      description: "Apex Legends is a fast-paced battle royale game with unique heroes and abilities. Players select from a roster of Legends, each with distinct skills, and work together to outplay opponents. Its dynamic gameplay and tactical opportunities make every match exhilarating.",
-      playStoreLink: "https://play.google.com/store/apps/details?id=com.ea.gp.apexlegendsmobile",
-      collaborations: [
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
         {
-          name: "Twitch",
-          description: "Stream Apex Legends and earn exclusive rewards.",
-          link: "https://www.twitch.tv/"
-        }
-      ]
-    }
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+      ],
+    },
+    {
+      id: "Gadgets",
+      name: "Gadgets",
+      description: "Valorant is a tactical 5v5 shooter with unique agents...",
+      products: [
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+      ],
+    },
+    {
+      id: "Accessorise",
+      name: "Accessorise",
+      description: "Valorant is a tactical 5v5 shooter with unique agents...",
+      products: [
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+      ],
+    },
+    {
+      id: "Laptops",
+      name: "Laptops",
+      description: "Valorant is a tactical 5v5 shooter with unique agents...",
+      products: [
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+      ],
+    },
+    {
+      id: "Laptops",
+      name: "Laptops",
+      description: "Valorant is a tactical 5v5 shooter with unique agents...",
+      products: [
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/valorant_mug.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/valorant_backpack.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+      ],
+    },
+    // Add more game sections with their products...
   ];
 
   useEffect(() => {
@@ -83,19 +217,26 @@ export default function GameDetails({ params }) {
     return <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">Loading...</div>;
   }
 
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const handleCloseProductDetails = () => {
+    setSelectedProduct(null);
+  };
+
+  const handleAddToCart = () => {
+    alert("Added to cart!");
+  };
+
+  const handleBuyNow = () => {
+    alert("Redirecting to checkout!");
+  };
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white p-8">
+    <div className="flex items-center justify-center min-h-screen w-full bg-gray-900 text-white p-5 m-10">
       <div className="w-full max-w-7xl flex flex-col lg:flex-row bg-gray-800 rounded-lg p-8 shadow-lg border border-gray-700">
-        <div className="lg:w-1/2 flex justify-center items-center">
-          <Image
-            src={game.image}
-            alt={game.name}
-            width={600}
-            height={500}
-            className="rounded-lg border-4 border-purple-500 shadow-md"
-          />
-        </div>
-        <div className="lg:w-1/2 lg:pl-10 text-left flex flex-col justify-center h-full">
+        <div className="lg:w-1/2 lg:pl-10 text-left flex flex-col justify-center h-full m-10 p-10">
           <button
             onClick={() => router.back()}
             className="mb-6 text-purple-700 underline hover:text-purple-500 transition-colors"
@@ -104,34 +245,68 @@ export default function GameDetails({ params }) {
           </button>
           <h1 className="text-6xl font-bold mb-8 neon-text">{game.name}</h1>
           <p className="text-xl text-gray-300 mb-10 leading-relaxed">{game.description}</p>
-          <a
-            href={game.playStoreLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-green-400 to-blue-500 hover:scale-105 transition-transform duration-300 text-white py-4 px-16 rounded-full shadow-lg hover:shadow-green-400/50"
-          >
-            Download on Play Store
-          </a>
-          {game.collaborations && game.collaborations.length > 0 && (
-            <div className="mt-12">
-              <h2 className="text-4xl font-semibold mb-6 text-purple-500">Featured Collaborations</h2>
-              <div className="space-y-6">
-                {game.collaborations.map((collab, index) => (
-                  <div key={index} className="flex flex-col lg:flex-row items-start lg:items-center bg-gray-700 p-6 rounded-lg shadow-md border border-gray-600">
-                    <div className="lg:w-3/4">
-                      <h3 className="text-2xl font-bold text-white mb-2">{collab.name}</h3>
-                      <p className="text-gray-300">{collab.description}</p>
-                    </div>
-                    <a
-                      href={collab.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 lg:mt-0 lg:ml-auto bg-purple-700 hover:bg-purple-600 text-white py-2 px-6 rounded-full transition-transform hover:scale-105"
+
+          {/* Product Cards */}
+          <div className="mt-12">
+            <h2 className="text-4xl font-semibold mb-6 text-purple-500">Exclusive {game.name} Merchandise</h2>
+            <div className="grid grid-cols-2 gap-8">
+              {game.products.map((product) => (
+                <div
+                  key={product.id}
+                  className="bg-gray-700 p-6 rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform"
+                  onClick={() => handleProductClick(product)}
+                >
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={200}
+                    height={200}
+                    className="rounded-lg mb-4"
+                  />
+                  <h3 className="text-xl font-bold text-white">{product.name}</h3>
+                  <p className="text-gray-300">{product.description}</p>
+                  <p className="text-lg text-yellow-400 mt-2">{product.price}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Product Details Modal */}
+          {selectedProduct && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+              <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-2xl">
+                <button
+                  onClick={handleCloseProductDetails}
+                  className="text-purple-700 underline mb-6 hover:text-purple-500 transition-colors"
+                >
+                  Close Details
+                </button>
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={selectedProduct.image}
+                    alt={selectedProduct.name}
+                    width={300}
+                    height={300}
+                    className="rounded-lg mb-4"
+                  />
+                  <h3 className="text-4xl font-bold text-white">{selectedProduct.name}</h3>
+                  <p className="text-xl text-gray-300 mt-4">{selectedProduct.details}</p>
+                  <p className="text-lg text-yellow-400 mt-2">{selectedProduct.price}</p>
+                  <div className="mt-6 flex gap-4">
+                    <button
+                      onClick={handleAddToCart}
+                      className="bg-green-500 text-white py-2 px-8 rounded-full hover:scale-105 transition-transform"
                     >
-                      Learn More
-                    </a>
+                      Add to Cart
+                    </button>
+                    <button
+                      onClick={handleBuyNow}
+                      className="bg-purple-700 text-white py-2 px-8 rounded-full hover:scale-105 transition-transform"
+                    >
+                      Buy Now
+                    </button>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           )}

@@ -20,7 +20,7 @@ export default function Navbar() {
           className="hover:opacity-80 transition-opacity duration-300"
         />
         <div className="flex gap-8">
-          {["Home", "News", "Dashboard", "About", "Contact", "Service"].map((item) => (
+          {["Home", "Games", "Dashboard", "Rewards", ].map((item) => (
             <Link
               key={item}
               href={item === "News" ? "/view/News" : item === "Dashboard" ? "/dashboard" : `/${item.toLowerCase()}`}

@@ -43,41 +43,7 @@ export default function SidebarLeft() {
 
   return (
     <aside className="w-64 border-r border-gray-800 p-4">
-      <div className="mb-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="font-semibold">Discord Channel</h2>
-          <MoreVertical className="h-5 w-5 text-gray-500" />
-        </div>
-        {channels.map((channel) => (
-          <div
-            key={channel.name}
-            className="flex items-center gap-3 mb-4 hover:bg-gray-800 p-2 rounded-lg cursor-pointer group"
-          >
-            <div className="relative w-8 h-8">
-              <Image
-                src={channel.image}
-                alt={channel.name}
-                width={32}
-                height={32}
-                className="rounded-full group-hover:scale-110 transition-transform duration-300"
-              />
-            </div>
-            <div>
-              <p className="font-medium">{channel.name}</p>
-              <p className="text-sm text-gray-400">
-                {channel.followers} followers
-              </p>
-            </div>
-          </div>
-        ))}
-        <Button
-          className="relative w-full bg-gradient-to-r from-purple-700 to-purple-500 hover:scale-105 transition-transform duration-300 mt-4 text-white border-2 border-transparent hover:border-purple-400"
-          onClick={() => (window.location.href = "https://discord.com/channels/@me")} // Replace 'https://example.com' with your desired URL
-        >
-          <span className="absolute inset-0 rounded-lg border-2 border-purple-400 opacity-50 blur-md"></span>
-          Join Us
-        </Button>
-      </div>
+      
 
       <div>
         <h2 className="font-semibold mb-4">Platforms</h2>

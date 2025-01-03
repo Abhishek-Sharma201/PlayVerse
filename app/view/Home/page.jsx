@@ -4,7 +4,7 @@ import Navbar from "../../self-components/Home-Components/Navbar";
 import SidebarLeft from "../../self-components/Home-Components/SidebarLeft";
 import HeroSection from "../../self-components/Home-Components/HeroSection";
 import TrendingGames from "../../self-components/Home-Components/TrendingGames";
-import SidebarRight from "../../self-components/Home-Components/SidebarRight";
+// import SidebarRight from "../../self-components/Home-Components/SidebarRight";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
           <HeroSection />
           <TrendingGames />
         </main>
-        <SidebarRight className="w-full md:w-1/4" />
+        {/* <SidebarRight className="w-full md:w-1/4" /> */}
       </div>
     </div>
   );
