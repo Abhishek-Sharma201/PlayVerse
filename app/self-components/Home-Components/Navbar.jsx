@@ -23,7 +23,7 @@ export default function Navbar() {
           {["Home", "Games", "Dashboard", "Rewards", ].map((item) => (
             <Link
               key={item}
-              href={item === "News" ? "/view/News" : item === "Dashboard" ? "/dashboard" : `/${item.toLowerCase()}`}
+              href={item === "Events" ? "/view/News" : item === "Dashboard" ? "/dashboard" : item === "Games" ? "/view/games" :  item === "Rewards" ? "/view/points" : `/${item.toLowerCase()}`}
               passHref
             >
               <button

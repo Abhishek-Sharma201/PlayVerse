@@ -24,7 +24,7 @@ const LandingPageNav = () => {
             <li>Login</li>
           </Link>
           <Link
-            href="/games"
+            href="/view/games"
             className="h-full flex flex-col items-center justify-center px-4 hover:bg-white hover:text-black rounded-sm transition-all"
           >
             <li>Games</li>

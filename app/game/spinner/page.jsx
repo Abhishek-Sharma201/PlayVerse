@@ -1,12 +1,12 @@
-"use client"
-import { useState, useEffect } from 'react';
+"use client";
+import { useState, useEffect } from "react";
 
 const ScratchCardGame = () => {
   const [scratched, setScratched] = useState(Array(9).fill(false));
   const [results, setResults] = useState(Array(9).fill(null));
   const [won, setWon] = useState(false);
   const [message, setMessage] = useState("");
-  const [bombIndex, setBombIndex] = useState(null);  // Store the bomb index
+  const [bombIndex, setBombIndex] = useState(null); // Store the bomb index
 
   const numbers = [5, 10, 15, 20, 30, 35];
   const totalCells = 9;
@@ -18,9 +18,9 @@ const ScratchCardGame = () => {
 
     // Randomly add a bomb to one of the cells
     const bombLocation = Math.floor(Math.random() * totalCells);
-    randomizedResults[bombLocation] = '💣';
+    randomizedResults[bombLocation] = "💣";
 
-    setBombIndex(bombLocation);  // Store the bomb's location
+    setBombIndex(bombLocation); // Store the bomb's location
     setResults(randomizedResults);
     setScratched(Array(totalCells).fill(false));
     setWon(false);
@@ -34,7 +34,7 @@ const ScratchCardGame = () => {
       setScratched(newScratched);
 
       // If the user hits the bomb
-      if (results[index] === '💣') {
+      if (results[index] === "💣") {
         setMessage("Better luck next time! 💥");
         setWon(false);
         return;
@@ -64,44 +64,68 @@ const ScratchCardGame = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-indigo-500 to-purple-700">
-      <h1 className="text-4xl text-white font-bold mb-6">Tap & Win!</h1>  {/* Updated game name here */}
+<div className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gradient-to-br from-indigo-600 via-purple-700 to-pink-500 p-6">
+  {/* Left Side: Game Section */}
+  <div className="flex flex-col items-center justify-center w-full lg:w-1/2">
+    <h1 className="text-5xl font-extrabold text-white mb-8 drop-shadow-lg">
+      Tap & Win!
+    </h1>
 
-      <div className="grid grid-cols-3 gap-4 w-64 animate-fade-in">
-        {results.map((result, index) => (
-          <div
-            key={index}
-            onClick={() => handleScratch(index)}
-            className={`flex items-center justify-center w-20 h-20 rounded-md cursor-pointer transition-transform duration-500 bg-gray-300 shadow-lg transform hover:scale-105 ${
-              scratched[index] ? "bg-white" : "hover:bg-gray-400"
-            }`}
-          >
-            {scratched[index] && (
-              <span className="text-2xl font-bold animate-appear">
-                {result === '💣' ? '💣' : result}
-              </span>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {message && (
+    {/* Game Grid */}
+    <div className="grid grid-cols-3 gap-6 w-[36rem] sm:w-[32rem] md:w-[40rem] lg:w-[44rem] mx-auto p-4 bg-white bg-opacity-10 rounded-2xl shadow-lg backdrop-blur-lg border border-white border-opacity-30">
+      {results.map((result, index) => (
         <div
-          className={`mt-6 text-gray-800 font-bold text-xl p-4 rounded-lg shadow-md animate-bounce ${
-            won ? "bg-yellow-400" : "bg-red-400"
-          }`}
+          key={index}
+          onClick={() => handleScratch(index)}
+          className={`flex items-center justify-center w-24 h-24 rounded-lg cursor-pointer transition-all duration-500 transform hover:scale-105 hover:bg-gray-100 ${
+            scratched[index] ? "bg-gray-100 text-gray-800" : "bg-gray-200"
+          } shadow-md`}
         >
-          {message}
+          {scratched[index] && (
+            <span className="text-3xl font-bold animate-fade-in">
+              {result === "💣" ? "💣" : result}
+            </span>
+          )}
         </div>
-      )}
-
-      <button
-        className="mt-8 px-6 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-300 animate-pop"
-        onClick={initializeGame}
-      >
-        Play Again
-      </button>
+      ))}
     </div>
+
+    {/* Game Status */}
+    {message && (
+      <div
+        className={`mt-6 text-white font-semibold text-xl px-6 py-3 rounded-lg shadow-md transition-all duration-300 ${
+          won ? "bg-green-500" : "bg-red-500"
+        }`}
+      >
+        {message}
+      </div>
+    )}
+
+    {/* Play Again Button */}
+    <button
+      className="mt-10 px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 active:scale-95"
+      onClick={initializeGame}
+    >
+      Play Again
+    </button>
+  </div>
+
+  {/* Right Side: Instructions Section */}
+  <div className="flex flex-col justify-center w-full lg:w-1/2 bg-white bg-opacity-10 rounded-2xl shadow-lg backdrop-blur-lg border border-white border-opacity-30 p-8 mt-8 lg:mt-0 lg:ml-8 text-white">
+    <h2 className="text-3xl font-bold mb-4">How to Play</h2>
+    <ul className="text-lg leading-relaxed space-y-4">
+      <li>🎯 Tap any square to reveal a number or a bomb.</li>
+      <li>🎉 Match 3 of the same numbers to win points.</li>
+      <li>💣 If you uncover the bomb, you lose the game!</li>
+      <li>🔄 You can restart the game anytime by clicking "Play Again."</li>
+      <li>✨ Try to reveal as many squares as possible without hitting the bomb!</li>
+    </ul>
+    <div className="mt-6 p-4 bg-green-500 text-center text-lg font-semibold rounded-lg shadow-md">
+      Tip: Be strategic and avoid the bomb to maximize your chances!
+    </div>
+  </div>
+</div>
+
   );
 };
 

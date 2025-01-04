@@ -38,7 +38,7 @@ export default function SidebarLeft() {
 
   // Function to navigate to the PlayGames page
   const navigateToPlayGames = () => {
-    router.push("/view/PlayGames"); // Replace with the actual route to your PlayGames page
+    router.push("/view/games"); // Replace with the actual route to your PlayGames page
   };
 
   return (

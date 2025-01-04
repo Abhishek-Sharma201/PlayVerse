@@ -1,5 +1,5 @@
-"use client"
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 
 const TicTacToe = () => {
   const [board, setBoard] = useState(Array(9).fill(""));
@@ -75,8 +75,8 @@ const TicTacToe = () => {
       const [a, b, c] = pattern;
       const line = [board[a], board[b], board[c]];
 
-      if (line.filter(cell => cell === player).length === 2 && line.filter(cell => cell === "").length === 1) {
-        return [a, b, c].find(index => board[index] === "");
+      if (line.filter((cell) => cell === player).length === 2 && line.filter((cell) => cell === "").length === 1) {
+        return [a, b, c].find((index) => board[index] === "");
       }
     }
 
@@ -115,46 +115,61 @@ const TicTacToe = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-white min-h-screen text-gray-900 p-5">
-      {!gameStarted ? (
-        <div className="text-center">
-          <h1 className="text-4xl font-extrabold mb-6">Choose Your Symbol</h1>
-          <button
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg font-bold text-xl mx-2"
-            onClick={() => startGame("X")}
-          >
-            Play as X
-          </button>
-          <button
-            className="px-6 py-3 bg-red-600 text-white rounded-lg font-bold text-xl mx-2"
-            onClick={() => startGame("O")}
-          >
-            Play as O
-          </button>
-        </div>
-      ) : (
-        <>
-          <h1 className="text-5xl font-extrabold mb-8 drop-shadow-lg text-gray-800">Tic Tac Toe</h1>
-          <div className="grid grid-cols-3 gap-4 p-5 bg-gray-100 rounded-xl shadow-2xl">
-            {board.map((cell, index) => (
-              <div
-                key={index}
-                className={`w-28 h-28 text-white flex items-center justify-center text-4xl font-extrabold cursor-pointer transition-all duration-300 hover:scale-110 shadow-lg rounded-lg ${cell === "X" ? "bg-green-500" : cell === "O" ? "bg-red-500" : "bg-gray-200"}`}
-                onClick={() => handleClick(index)}
-              >
-                {cell}
-              </div>
-            ))}
+    <div className="flex flex-row items-start justify-center bg-gray-50 min-h-screen p-10">
+      <div className="w-2/3 flex flex-col items-center bg-white rounded-lg shadow-lg p-8">
+        {!gameStarted ? (
+          <div className="text-center">
+            <h1 className="text-4xl font-extrabold mb-6">Choose Your Symbol</h1>
+            <button
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-bold text-xl mx-2"
+              onClick={() => startGame("X")}
+            >
+              Play as X
+            </button>
+            <button
+              className="px-6 py-3 bg-red-600 text-white rounded-lg font-bold text-xl mx-2"
+              onClick={() => startGame("O")}
+            >
+              Play as O
+            </button>
           </div>
-          <button
-            className="mt-10 px-8 py-3 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg shadow-xl hover:from-red-500 hover:to-red-300 transform transition-transform duration-300 hover:scale-110 font-bold text-lg"
-            onClick={resetGame}
-          >
-            Reset Game
-          </button>
-          <p className="mt-6 text-lg font-bold">Current Turn: <span className={`text-2xl ${currentPlayer === 'X' ? 'text-green-500' : 'text-red-500'}`}>{currentPlayer}</span></p>
-        </>
-      )}
+        ) : (
+          <>
+            <h1 className="text-5xl font-extrabold mb-8 text-gray-800">Tic Tac Toe</h1>
+            <div className="grid grid-cols-3 gap-4 p-5 bg-gray-100 rounded-xl shadow-2xl">
+              {board.map((cell, index) => (
+                <div
+                  key={index}
+                  className={`w-28 h-28 text-white flex items-center justify-center text-4xl font-extrabold cursor-pointer transition-all duration-300 hover:scale-110 shadow-lg rounded-lg ${cell === "X" ? "bg-green-500" : cell === "O" ? "bg-red-500" : "bg-gray-200"}`}
+                  onClick={() => handleClick(index)}
+                >
+                  {cell}
+                </div>
+              ))}
+            </div>
+            <button
+              className="mt-10 px-8 py-3 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-lg shadow-xl hover:from-red-500 hover:to-red-300 transform transition-transform duration-300 hover:scale-110 font-bold text-lg"
+              onClick={resetGame}
+            >
+              Reset Game
+            </button>
+            <p className="mt-6 text-lg font-bold">
+              Current Turn: <span className={`text-2xl ${currentPlayer === "X" ? "text-green-500" : "text-red-500"}`}>{currentPlayer}</span>
+            </p>
+          </>
+        )}
+      </div>
+
+      <div className="w-1/3 flex flex-col bg-gray-200 rounded-lg shadow-lg p-6 ml-6">
+        <h2 className="text-3xl font-bold mb-4">Rules</h2>
+        <ul className="list-disc list-inside text-lg">
+          <li>The game is played on a 3x3 grid.</li>
+          <li>You are X or O, and the bot is your opponent.</li>
+          <li>Players take turns placing their symbol on an empty square.</li>
+          <li>The first player to get 3 of their symbols in a row (up, down, across, or diagonally) wins.</li>
+          <li>If all 9 squares are filled and no player has 3 in a row, the game ends in a tie.</li>
+        </ul>
+      </div>
     </div>
   );
 };
