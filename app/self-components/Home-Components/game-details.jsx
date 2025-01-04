@@ -18,7 +18,7 @@ export default function GameDetails({ params }) {
         {
           id: "product1",
           name: "Valorant Hoodie",
-          image: "/images/valorant_hoodie.jpg",
+          image: "/images/products2/ct4.jpg",
           description: "A stylish Valorant-themed hoodie for gaming enthusiasts.",
           price: "$39.99",
           details: "Soft, comfortable hoodie perfect for casual gaming sessions.",
@@ -26,7 +26,7 @@ export default function GameDetails({ params }) {
         {
           id: "product2",
           name: "Apex Legends T-shirt",
-          image: "/images/apex_tshirt.jpg",
+          image: "/images/products2/ct3.jpg",
           description: "An awesome Apex Legends T-shirt for true fans.",
           price: "$19.99",
           details: "100% cotton T-shirt with vibrant Apex Legends design.",
@@ -34,7 +34,7 @@ export default function GameDetails({ params }) {
         {
           id: "product3",
           name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
+          image: "/images/products2/ct1.jpg",
           description: "A mug for your Valorant morning brew.",
           price: "$12.99",
           details: "Ceramic mug featuring the iconic Valorant logo.",
@@ -42,7 +42,7 @@ export default function GameDetails({ params }) {
         {
           id: "product4",
           name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
+          image: "/images/products2/ct2.jpg",
           description: "Carry your gear in a Valorant-themed backpack.",
           price: "$49.99",
           details: "Durable and stylish backpack for gamers on the go.",
@@ -57,7 +57,7 @@ export default function GameDetails({ params }) {
         {
           id: "product3",
           name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
+          image: "/images/products2/gt.jpg",
           description: "A mug for your Valorant morning brew.",
           price: "$12.99",
           details: "Ceramic mug featuring the iconic Valorant logo.",
@@ -65,7 +65,7 @@ export default function GameDetails({ params }) {
         {
           id: "product4",
           name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
+          image: "/images/products2/gt2.jpg",
           description: "Carry your gear in a Valorant-themed backpack.",
           price: "$49.99",
           details: "Durable and stylish backpack for gamers on the go.",
@@ -73,7 +73,7 @@ export default function GameDetails({ params }) {
         {
           id: "product3",
           name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
+          image: "/images/products2/gt3.jpg",
           description: "A mug for your Valorant morning brew.",
           price: "$12.99",
           details: "Ceramic mug featuring the iconic Valorant logo.",
@@ -81,7 +81,7 @@ export default function GameDetails({ params }) {
         {
           id: "product4",
           name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
+          image: "/images/products2/gt4.jpg",
           description: "Carry your gear in a Valorant-themed backpack.",
           price: "$49.99",
           details: "Durable and stylish backpack for gamers on the go.",
@@ -96,7 +96,7 @@ export default function GameDetails({ params }) {
         {
           id: "product3",
           name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
+          image: "/images/products2/ac1.jpg",
           description: "A mug for your Valorant morning brew.",
           price: "$12.99",
           details: "Ceramic mug featuring the iconic Valorant logo.",
@@ -104,7 +104,7 @@ export default function GameDetails({ params }) {
         {
           id: "product4",
           name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
+          image: "/images/products2/ac2.jpg",
           description: "Carry your gear in a Valorant-themed backpack.",
           price: "$49.99",
           details: "Durable and stylish backpack for gamers on the go.",
@@ -112,7 +112,7 @@ export default function GameDetails({ params }) {
         {
           id: "product3",
           name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
+          image: "/images/products2/ac3.jpg",
           description: "A mug for your Valorant morning brew.",
           price: "$12.99",
           details: "Ceramic mug featuring the iconic Valorant logo.",
@@ -120,46 +120,7 @@ export default function GameDetails({ params }) {
         {
           id: "product4",
           name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
-          description: "Carry your gear in a Valorant-themed backpack.",
-          price: "$49.99",
-          details: "Durable and stylish backpack for gamers on the go.",
-        },
-      ],
-    },
-    {
-      id: "Laptops",
-      name: "Laptops",
-      description: "Valorant is a tactical 5v5 shooter with unique agents...",
-      products: [
-        {
-          id: "product3",
-          name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
-          description: "A mug for your Valorant morning brew.",
-          price: "$12.99",
-          details: "Ceramic mug featuring the iconic Valorant logo.",
-        },
-        {
-          id: "product4",
-          name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
-          description: "Carry your gear in a Valorant-themed backpack.",
-          price: "$49.99",
-          details: "Durable and stylish backpack for gamers on the go.",
-        },
-        {
-          id: "product3",
-          name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
-          description: "A mug for your Valorant morning brew.",
-          price: "$12.99",
-          details: "Ceramic mug featuring the iconic Valorant logo.",
-        },
-        {
-          id: "product4",
-          name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
+          image: "/images/products2/ac4.jpg",
           description: "Carry your gear in a Valorant-themed backpack.",
           price: "$49.99",
           details: "Durable and stylish backpack for gamers on the go.",
@@ -174,7 +135,7 @@ export default function GameDetails({ params }) {
         {
           id: "product3",
           name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
+          image: "/images/products2/lt1.jpg",
           description: "A mug for your Valorant morning brew.",
           price: "$12.99",
           details: "Ceramic mug featuring the iconic Valorant logo.",
@@ -182,7 +143,7 @@ export default function GameDetails({ params }) {
         {
           id: "product4",
           name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
+          image: "/images/products2/lt2.jpg",
           description: "Carry your gear in a Valorant-themed backpack.",
           price: "$49.99",
           details: "Durable and stylish backpack for gamers on the go.",
@@ -190,7 +151,7 @@ export default function GameDetails({ params }) {
         {
           id: "product3",
           name: "Valorant Mug",
-          image: "/images/valorant_mug.jpg",
+          image: "/images/products2/lt4.jpg",
           description: "A mug for your Valorant morning brew.",
           price: "$12.99",
           details: "Ceramic mug featuring the iconic Valorant logo.",
@@ -198,7 +159,46 @@ export default function GameDetails({ params }) {
         {
           id: "product4",
           name: "Valorant Backpack",
-          image: "/images/valorant_backpack.jpg",
+          image: "/images/products2/lt3.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+      ],
+    },
+    {
+      id: "Laptops",
+      name: "Laptops",
+      description: "Valorant is a tactical 5v5 shooter with unique agents...",
+      products: [
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/products2/mb1.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/products2/mb2.jpg",
+          description: "Carry your gear in a Valorant-themed backpack.",
+          price: "$49.99",
+          details: "Durable and stylish backpack for gamers on the go.",
+        },
+        {
+          id: "product3",
+          name: "Valorant Mug",
+          image: "/images/products2/mb3.jpg",
+          description: "A mug for your Valorant morning brew.",
+          price: "$12.99",
+          details: "Ceramic mug featuring the iconic Valorant logo.",
+        },
+        {
+          id: "product4",
+          name: "Valorant Backpack",
+          image: "/images/products2/mb4.jpg",
           description: "Carry your gear in a Valorant-themed backpack.",
           price: "$49.99",
           details: "Durable and stylish backpack for gamers on the go.",
